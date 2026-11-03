@@ -1,0 +1,184 @@
+/* ===========================================================
+  RAPAX / HYPERION — HOMEPAGE V4 · DIRECTION MIX
+  - Header geometry from V1, with V3 corrected Hyperion logo
+  - Lineup rounded cards & editorial finish from V2
+  - Italian Engineering / American Access component from V1
+  - Hero, spotlight, origin, engineering & footer from V3
+  - Rounded V2-inspired CTAs across the experience
+  Brand colors: Hyperion guidelines (client supplied)
+=========================================================== */
+
+/* [01] V1 header: clean, unboxed over the hero, no announcement bar. */
+.site-header,
+.site-header:not(.scrolled){
+  position:absolute;top:0;left:0;right:0;z-index:80;
+  padding-top:0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(180deg,rgba(12,13,13,.82),rgba(12,13,13,.24));
+  box-shadow:none;
+}
+.site-header .header-inner,
+.site-header:not(.scrolled) .header-inner{
+  width:min(calc(100% - 112px),var(--max));
+  max-width:var(--max);margin-inline:auto;
+  padding:0;height:96px;border:0;border-radius:0;
+  background:none;box-shadow:none;backdrop-filter:none;
+}
+.site-header .header-inner:before{display:none}
+.site-header .brand-logo{width:206px;max-height:60px;object-fit:contain}
+.site-header .logo-link{gap:22px}
+.site-header .market-label{padding-left:18px;border-left:1px solid rgba(255,255,255,.24);color:#d1d4d4}
+.site-header .desktop-nav{gap:31px}
+.site-header .desktop-nav a{font-size:10px;letter-spacing:.12em;color:#edf0f0}
+.site-header .header-action{
+  background:transparent;border:1px solid rgba(255,255,255,.30);
+  border-radius:999px;padding:16px 24px;
+  font-size:10px;letter-spacing:.11em;
+  box-shadow:none;
+}
+.site-header .header-action:hover{border-color:var(--red);background:var(--red)}
+/* V3's functional full-width sticky conversion is preserved. */
+.site-header.scrolled{
+  position:fixed;top:0;left:0;right:0;padding:0;
+  background:rgba(15,16,16,.975)!important;
+  border-bottom:1px solid rgba(255,255,255,.12);
+  box-shadow:0 14px 40px rgba(0,0,0,.23);
+  backdrop-filter:blur(17px);
+}
+.site-header.scrolled .header-inner{
+  width:100%;max-width:none;margin:0;height:78px;
+  padding:0 max(28px,calc((100vw - var(--max))/2));
+  border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;
+}
+.site-header.scrolled .brand-logo{width:190px}
+.site-header.menu-open{position:fixed;top:0;padding:0;background:#0f1010!important}
+
+/* [02] Restore actual V2 four-model card direction, while respecting V3 branding. */
+.collection{background:linear-gradient(180deg,#f5f5f3 0%,#f1f2f2 100%)}
+.collection-title-row{margin:60px 0 50px}
+.models-grid{gap:18px}
+.model-card{
+  height:470px;border-radius:20px;
+  border:1px solid rgba(18,20,20,.08);
+  box-shadow:0 28px 55px rgba(16,18,18,.12);
+  transform:translateY(0);
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .35s;
+}
+.model-card:before{border-radius:20px}
+.model-card:after{border-radius:18px}
+.model-card:hover{transform:translateY(-8px);box-shadow:0 38px 68px rgba(12,14,14,.18);border-color:rgba(215,60,49,.2)}
+.model-index{
+  top:20px;left:20px;padding:7px 10px;border-radius:999px;
+  background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(8px)
+}
+.model-bottom{left:36px;right:36px;bottom:36px}
+.model-bottom h3{font-size:32px}
+.model-select{
+  border-radius:12px;width:42px;height:42px;
+  background:rgba(255,255,255,.04);
+  border-color:rgba(255,255,255,.29);
+  backdrop-filter:blur(10px)
+}
+.model-select:hover{transform:translate(2px,-2px)}
+
+/* [03] V1 dark, powerful Italy/USA partnership with original two-column structure. */
+.partnership{background:#222425!important;color:#f1f2f2;position:relative;isolation:isolate;overflow:hidden}
+.partnership:before{
+  content:'USA'!important;position:absolute;right:0;bottom:-.2em;
+  font-family:'Ethnocentric','Encode Sans',sans-serif;
+  font-size:38vw;line-height:.8;font-weight:900;letter-spacing:-.1em;
+  color:rgba(255,255,255,.013)!important;z-index:-1;
+  background:none!important;
+}
+.partnership-inner{padding-top:125px;padding-bottom:95px}
+.partner-label{display:flex;align-items:center;gap:16px;font-size:10px;letter-spacing:.19em;font-weight:800;color:#aeb3b4}
+.partner-grid{display:grid;grid-template-columns:1.17fr .83fr;gap:100px;align-items:end;padding:65px 0 87px;border:0}
+.partner-headline h2{
+  font-family:'Ethnocentric','Encode Sans','Arial Black',sans-serif;
+  font-size:clamp(48px,6.8vw,102px);letter-spacing:-.075em;
+  line-height:1.06;font-weight:900;margin:0;color:#f1f2f2;
+}
+.partner-headline h2 span{color:var(--red)}
+.partner-text{padding-bottom:8px}
+.partner-text p{font-size:18px;line-height:1.9;color:#e1e1e1;max-width:410px}
+.partner-text .partner-note{font-size:13px;color:#9b9fa0;margin:20px 0 31px}
+.partner-text .link-arrow{display:inline-flex;gap:16px;align-items:center;color:#f1f2f2}
+.partner-logos{
+  display:flex;align-items:center;justify-content:space-around;gap:50px;
+  padding:32px 60px;border-top:1px solid #515556;
+  border-bottom:1px solid #515556;
+}
+.partner-brand{display:flex;align-items:flex-start;flex-direction:column;gap:23px;min-width:0;
+ padding:0;border:0;background:transparent;box-shadow:none;border-radius:0}
+.partner-brand>span{font-size:9px;letter-spacing:.18em;font-weight:800;color:#9da1a1}
+.partner-brand img{width:210px;max-height:90px;object-fit:contain;object-position:left center;margin:0}
+.partner-brand:last-child img{width:240px}
+.partner-join{font-family:Georgia,serif;font-style:italic;font-size:40px;font-weight:300;color:var(--red)}
+
+/* [04] Buttons from V2: premium softness without exaggerated curvature. */
+.hero-primary,.button,.button-red,.header-action,.footer-cta,
+.text-button,.model-select{transition-timing-function:var(--ease)}
+.hero-primary{border-radius:999px;padding-left:25px;padding-right:25px}
+.button{border-radius:999px}
+.button-red{border-radius:999px}
+.footer-cta{border-radius:999px}
+.text-button{border-radius:999px}
+.spotlight-tab{border-radius:11px}
+.menu-toggle{border-radius:10px}
+/* Tiny interaction accents are deliberately subtle. */
+.model-card .model-image img{transition:transform .8s var(--ease),filter .55s var(--ease)}
+.partner-text .link-arrow .icon{transition:transform .3s var(--ease)}
+.partner-text .link-arrow:hover .icon{transform:translateX(4px)}
+.hero-primary:focus-visible,.model-select:focus-visible,.spotlight-tab:focus-visible,.footer-cta:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+
+/* Responsive reconstruction of V1 header / partnership + V2 lineup */
+@media(max-width:1280px){
+  .site-header .header-inner,.site-header:not(.scrolled) .header-inner{width:min(calc(100% - 80px),var(--max))}
+  .site-header .desktop-nav{gap:20px}
+  .model-card{height:448px}
+}
+@media(max-width:1040px){
+  .site-header .header-inner,.site-header:not(.scrolled) .header-inner{width:min(calc(100% - 80px),var(--max));height:88px}
+  .site-header.scrolled .header-inner{width:100%;max-width:none;padding:0 40px;height:76px}
+  .site-header.menu-open{padding-top:0}
+  .partner-grid{gap:55px}
+  .partner-logos{gap:25px;padding:30px 24px}
+}
+@media(max-width:760px){
+  .site-header .header-inner,.site-header:not(.scrolled) .header-inner{width:calc(100% - 40px);height:74px}
+  .site-header.scrolled .header-inner{width:100%;max-width:none;padding:0 20px;height:70px}
+  .site-header .brand-logo{width:174px}
+  .site-header .market-label{display:none}
+  .header-action{display:none}
+  .collection-title-row{margin:42px 0 34px}
+  .models-grid{gap:12px}
+  .model-card{height:370px;border-radius:18px}
+  .model-card:before{border-radius:18px}
+  .model-card:after{border-radius:14px}
+  .model-index{top:12px;left:12px}
+  .model-bottom{left:24px;right:24px;bottom:24px}
+  .model-bottom h3{font-size:24px}
+  .model-select{width:34px;height:34px;border-radius:9px}
+  .partnership-inner{padding-top:76px;padding-bottom:66px}
+  .partner-grid{grid-template-columns:1fr;gap:27px;padding:45px 0 56px}
+  .partner-headline h2{font-size:clamp(51px,10.5vw,84px)}
+  .partner-text p{font-size:15px}
+  .partner-logos{padding:28px 0;gap:24px;flex-wrap:wrap;justify-content:flex-start}
+  .partner-brand img{width:175px}
+  .partner-brand:last-child img{width:190px}
+  .partner-join{font-size:24px}
+  .partner-brand>span{font-size:7px}
+}
+@media(max-width:420px){
+  .site-header .brand-logo{width:154px}
+  .model-card{height:315px}
+  .model-bottom{left:20px;right:20px;bottom:20px}
+  .model-bottom h3{font-size:20px}
+  .model-select{width:30px;height:30px}
+  .partner-headline h2{font-size:clamp(45px,11vw,60px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .model-card:hover,.model-select:hover{transform:none}
+}

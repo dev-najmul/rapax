@@ -1,0 +1,14 @@
+
+/* Navigation-only functional enhancements — retains the approved V4 look */
+.models-grid .model-card{display:block;color:inherit;text-decoration:none}
+.models-grid .model-card:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.models-grid .model-card .model-select{pointer-events:none}
+.spotlight-photo-link{position:absolute;inset:0;z-index:8;display:block}
+.spotlight-photo-link:focus-visible{outline:3px solid var(--red);outline-offset:-8px}
+.collection-card-media{position:absolute;inset:0;z-index:0;display:block}
+.collection-card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.collection-card-content{z-index:2}
+.collection-card-media:focus-visible{outline:3px solid var(--red);outline-offset:-8px}
+/* Reviewer-only directory uses existing page cards and fonts. */
+.inner-page .info-card a[href$=".html"]:hover{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px}
+.collection-card:before{z-index:1;pointer-events:none}

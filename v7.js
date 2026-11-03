@@ -1,0 +1,1 @@
+document.addEventListener('click', e => {const btn=e.target.closest('[data-demo-cart]');if(!btn)return;const panel=btn.closest('.v7-commerce-panel');const feedback=panel&&panel.querySelector('.v7-feedback');if(feedback){feedback.hidden=false;feedback.classList.add('is-open');} });
